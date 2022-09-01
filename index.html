@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  </head>
+<body>
+  <div id="root"></div>
+  <script type="module">
+    
+    const createtag = [];
+    createtag.push(`<ul></ul>`);
+    
+    
+    const root = document.getElementById("root");
+    
+    root.style.width = "100px";
+    root.style.height ="100px";
+    root.style.backgroundColor = "cadetblue"
+    
+    console.dir(root.style);
+
+    const dom = [];
+
+    for (let i = 0; i < 5; i++){
+      
+      dom.push(`<li>item-${i+1}</li>`);
+      
+    }
+    dom.unshift("<ul>");
+    dom.push("</ul>");
+    console.log(dom.join(''));
+    root.innerHTML = dom.join('');
+
+
+    
+
+    /*function createTag(count,tagName,id,idName,textContent,){
+
+      for (let i = 0; i < count; i++){
+        
+        return dom.push(`<${tagName} ${id} = "${idName}${i+1}">${textContent}</${tagName}>`);      
+      }
+
+      let ptag = createTag("5","","id","ptag","너는바보야");
+
+
+      root.innerHTML = ptag;
+      
+      
+      console.log(createTag("10","li","id","litag","너는바보야"));
+      console.log(dom.join(''));
+      
+    }*/
+
+    /*function donguk(tagName,textContent){
+      return `<${tagName}>${textContent}</${tagName}>`;
+    }
+    
+    let test = donguk("section","hello") + donguk("article","새치기")  + donguk("nav", "나는 상호야");
+  
+    console.log(typeof(donguk()));
+    root.innerHTML = test;*/
+  </script>
+</body>
+</html>
